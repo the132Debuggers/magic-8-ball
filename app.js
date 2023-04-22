@@ -49,14 +49,19 @@ function shakeBall() {
     ];
     const language = languageSelect.value;
     let randomAnswer;
-    if (language === 'en') {
-        randomAnswer = answersEn[Math.floor(Math.random() * answersEn.length)];
-    } else if (language === 'es') {
-        randomAnswer = answersEs[Math.floor(Math.random() * answersEs.length)];
+    magicBall.classList.add('shaker');
+    audio.play();
+    setTimeout(() => {
+        magicBall.classList.remove('shaker');
+        if (language === 'en') {
+            randomAnswer = answersEn[Math.floor(Math.random() * answersEn.length)];
+        } else if (language === 'es') {
+            randomAnswer = answersEs[Math.floor(Math.random() * answersEs.length)];
 
-    }
-    answer.innerText = randomAnswer;
-    speak(randomAnswer, language);
+        }
+        answer.innerText = randomAnswer;
+        speak(randomAnswer, language);
+    }, 1000);
 }
 
 function speak(message, language) {
@@ -64,10 +69,7 @@ function speak(message, language) {
     msg.text = message;
     msg.lang = language === 'en' ? 'en-US' : 'es-ES';
     msg.rate = 0.8;
-    audio.play();
-    setTimeout(() => {
-        speechSynthesis.speak(msg);
-    }, 500);
+    speechSynthesis.speak(msg);
 }
 
 function changeLanguage() {
