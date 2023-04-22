@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Magic 8 Ball</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Magic 8 Ball</h1>
+		<select id="language" onchange="changeLanguage()">
+			<option value="en">English</option>
+			<option value="es">Spanish</option>
+		</select>
+		<div class="magic-ball" onclick="shakeBall()"></div>
+		<p id="answer"></p>
+	</div>
+	<audio id="audio">
+		<source src="magic-sound.mp3" type="audio/mpeg">
+	</audio>
+	<script src="app.js"></script>
+</body>
+</html>
