@@ -62,6 +62,7 @@ function speak(message, language) {
     const msg = new SpeechSynthesisUtterance();
     msg.text = message;
     msg.lang = language === 'en' ? 'en-US' : 'es-ES';
+    msg.rate = 0.8;
     audio.play();
     speechSynthesis.speak(msg);
 }

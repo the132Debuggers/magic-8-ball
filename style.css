@@ -20,6 +20,7 @@ h1 {
 	background-image: url('magic-ball.png');
 	background-size: cover;
 	cursor: pointer;
+	border-radius: 99999px;
 }
 
 #answer {
