@@ -2,6 +2,7 @@ const languageSelect = document.getElementById('language');
 const magicBall = document.querySelector('.magic-ball');
 const answer = document.getElementById('answer');
 const audio = document.getElementById('audio');
+audio.playbackRate = 2;
 
 function shakeBall() {
     const answersEn = [
@@ -64,7 +65,9 @@ function speak(message, language) {
     msg.lang = language === 'en' ? 'en-US' : 'es-ES';
     msg.rate = 0.8;
     audio.play();
-    speechSynthesis.speak(msg);
+    setTimeout(() => {
+        speechSynthesis.speak(msg);
+    }, 500);
 }
 
 function changeLanguage() {
