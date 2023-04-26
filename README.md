@@ -1,6 +1,19 @@
 # Mystical Magic 8 Ball 
 
 --- 
+## Objective 
+Implementation of a magic-8 ball with a magical theme. 
+
+--- 
+
+## Features 
+-  Multi-lingual 
+- Text-to-speech 
+- Interactive 
+- Animation 
+- Plays Audio
+
+--- 
 
 ## Project Demo 
 
