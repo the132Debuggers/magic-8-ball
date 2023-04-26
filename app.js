@@ -2,6 +2,9 @@ const languageSelect = document.getElementById('language');
 const magicBall = document.querySelector('.magic-ball');
 const answer = document.getElementById('answer');
 const audio = document.getElementById('audio');
+const question = document.getElementById('question');
+const ask = document.getElementById('ask');
+
 audio.playbackRate = 2;
 
 function shakeBall() {
@@ -62,6 +65,8 @@ function shakeBall() {
         answer.innerText = randomAnswer;
         speak(randomAnswer, language);
     }, 1000);
+
+    document.getElementById("query").value = "";
 }
 
 function speak(message, language) {
@@ -120,10 +125,20 @@ function changeLanguage() {
         "Mis fuentes dicen que no.",
         "Muy dudoso."
     ];
+    const questionEn = "What is your question?";
+    const questionEs = "¿Cuál es tu pregunta?";
+    const askEn = "Ask";
+    const askEs = "Preguntar";
+
     if (language === 'en') {
         magicBall.style.backgroundImage = "url('magic-ball.png')";
+        question.innerText = questionEn;
+        ask.innerText = askEn;
     } else if (language === 'es') {
         magicBall.style.backgroundImage = "url('magic-ball-es.png')";
+        question.innerText = questionEs;
+        ask.innerText = askEs;
+
     }
     document.title = "Magic 8 Ball - " + (language === 'en' ? 'English' : 'Español');
     languageSelect.options[0].innerText = optionsEn[0];
