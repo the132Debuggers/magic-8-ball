@@ -82,6 +82,7 @@ h1 {
 	display: block;
 	position: relative;
 	z-index: 3;
+	position: relative;
 }
 
 #answer {
@@ -153,3 +154,74 @@ div.shaker {
 	src: url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sigmar&display=swap.woff") format(woff);
 }
 
+
+/* Style the text box*/
+input[type="text"] {
+	width: 500px;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	font-size: 16px;
+	height: 20px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+	background-color: #c77dff;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	height: 40px;
+	width: 100px;
+  }
+  
+  /* Change the button color on hover */
+  button[type="submit"]:hover {
+	background-color: #5a189a;
+  }
+
+  /* Style the select element */
+select {
+	font-size: 12px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	width: auto;
+	/* appearance: none; remove default dropdown arrow */
+  }
+  
+  /* Style the dropdown arrow */
+  select::-ms-expand {
+	display: none;
+  }
+  
+  select::after {
+	content: '\25BC'; /* Unicode character for dropdown arrow */
+	color: #777;
+	font-size: 12px;
+	right: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+  }
+  
+  /* Change the arrow color on hover */
+  select:hover::after {
+	color: #555;
+  }
+  
+  /* Change the arrow color on focus */
+  select:focus::after {
+	color: #333;
+	outline: none;
+  }
+  
+  /* Change the background color when an option is selected */
+  select option:checked {
+	background-color: #ddd;
+  }
