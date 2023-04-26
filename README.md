@@ -1,1 +1,2 @@
-# magic-8-ball
+# Mystical Magic 8 Ball 
+
